@@ -6,10 +6,10 @@ const Profile = ({ theme }) => {
     return savedUser
       ? JSON.parse(savedUser)
       : {
-          name: 'John Doe',
-          email: 'johndoe@example.com',
-          bio: 'Passionate about coding and design.',
-          phone: '123-456-7890',
+          name: 'Minhaz Ahmed',
+          email: 'minhazahmed123@gmail.com',
+          bio: 'Onwer and Head',
+          phone: '99013696969',
           location: 'New York, USA',
         };
   });

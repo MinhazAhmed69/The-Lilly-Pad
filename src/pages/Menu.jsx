@@ -12,6 +12,21 @@ import imageNine from '../assets/nine.jpg';
 import imageTen from '../assets/ten.jpg';
 import imageEleven from '../assets/eleven.jpg';
 import imageTwelve from '../assets/tweleve.jpg';
+import imageThirteen from '../assets/thirteen.jpg';
+import imageFourteen from '../assets/fourteen.jpg';
+import imageFifteen from '../assets/fifteen.jpg';
+import imageSixteen from '../assets/sixteen.jpg';
+import imageSeventeen from '../assets/seventeen.jpg';
+import imageEighteen from '../assets/eighteen.jpg';
+import imageNineteen from '../assets/nineteen.jpg';
+import imageTwenty from '../assets/twenty.jpg';
+import imageTwentyOne from '../assets/twentyone.jpg';
+import imageTwentyTwo from '../assets/twentytwo.jpg';
+import imageTwentyThree from '../assets/twentythree.jpg';
+import imageTwentyFour from '../assets/twentyfour.jpg';
+import imageTwentyFive from '../assets/twentyfive.jpg';
+import imageTwentySix from '../assets/twentysix.jpg';
+import imageTwentySeven from '../assets/twentyseven.jpg';
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1731226949859.json';
 import { motion } from 'framer-motion';
@@ -36,7 +51,22 @@ const Menu = () => {
     { title: 'Macarons', description: 'Creamy goodness.', price: 120, img: imageTen, tags: ['vegetarian'], addOns: [{ name: "Extra Filling", price: 15 }, { name: "Fruit Jam", price: 10 }] },
     { title: 'Ratatouille', description: 'Vegetable medley.', price: 280, img: imageEleven, tags: ['vegan'], addOns: [{ name: "Garlic Butter", price: 25 }, { name: "Extra Olives", price: 15 }] },
     { title: 'Ramen', description: 'Soul food.', price: 250, img: imageTwelve, tags: ['non-vegetarian'], addOns: [{ name: "Extra Noodles", price: 30 }, { name: "Soft Boiled Egg", price: 20 }] },
-  ];
+    { title: 'Bagels', description: 'Freshly baked bagels with your choice of spread.', price: 90, img: imageThirteen, tags: ['vegetarian'], addOns: [{ name: "Cream Cheese", price: 20 }, { name: "Avocado Spread", price: 25 }] },
+    { title: 'Avocado Toast', description: 'Smashed avocado on artisan bread with toppings.', price: 120, img: imageFourteen, tags: ['vegan'], addOns: [{ name: "Extra Avocado", price: 30 }, { name: "Poached Egg", price: 25 }] },
+    { title: 'Cheese Corn Balls', description: 'Crispy and cheesy snack bites.', price: 100, img: imageFifteen, tags: ['vegetarian'], addOns: [{ name: "Extra Cheese", price: 20 }, { name: "Spicy Dip", price: 15 }] },
+    { title: 'French Fries', description: 'Crispy golden fries served with ketchup.', price: 80, img: imageSixteen, tags: ['vegetarian', 'gluten-free'], addOns: [{ name: "Cheese Dip", price: 15 }, { name: "Spicy Seasoning", price: 10 }] },
+    { title: 'Mochi', description: 'Soft and chewy Japanese rice cakes with fillings.', price: 150, img: imageSeventeen, tags: ['vegetarian'], addOns: [{ name: "Extra Filling", price: 20 }, { name: "Matcha Dusting", price: 15 }] },
+    { title: 'Shawarma', description: 'Delicious wraps with fresh veggies and sauces.', price: 180, img: imageEighteen, tags: ['non-vegetarian'], addOns: [{ name: "Extra Meat", price: 50 }, { name: "Extra Sauce", price: 20 }] },
+    { title: 'Stuffed Dates', description: 'Dates filled with almond butter and drizzled with dark chocolate.', price: 130, img: imageNineteen, tags: ['vegan', 'gluten-free'], addOns: [{ name: "Extra Almond Butter", price: 20 }, { name: "Chia Seeds", price: 10 }] },
+    { title: 'Cauliflower Steak', description: 'Roasted cauliflower steak with chimichurri sauce, served with mashed sweet potatoes.', price: 300, img: imageTwenty, tags: ['vegan', 'gluten-free'], addOns: [{ name: "Extra Chimichurri", price: 20 }, { name: "Caramelized Onions", price: 15 }] },
+    { title: 'Jackfruit Carnitas with Coconut Rice', description: 'Smoky jackfruit served over fragrant coconut rice, topped with mango salsa.', price: 320, img: imageTwentyOne, tags: ['vegan', 'gluten-free'], addOns: [{ name: "Extra Mango Salsa", price: 25 }, { name: "Roasted Pineapple", price: 20 }] },
+    { title: 'Smoothie Bowl', description: 'A refreshing blend of fruits topped with granola, seeds, and fresh berries.', price: 180, img: imageTwentyTwo, tags: ['vegan', 'gluten-free'], addOns: [{ name: "Extra Berries", price: 20 }, { name: "Chia Seeds", price: 10 }] },
+    { title: 'British Breakfast', description: 'A classic hearty breakfast with baked beans, sautéed mushrooms, grilled tomatoes, hash browns, and toast.', price: 250, img: imageTwentyThree, tags: ['vegetarian'], addOns: [{ name: "Extra Hash Browns", price: 20 }, { name: "Vegan Sausage", price: 30 }] },
+    { title: 'Sushi', description: 'Assorted sushi rolls with fresh fish, vegetables, and tangy soy sauce.', price: 350, img: imageTwentyFour, tags: ['non-vegetarian'], addOns: [{ name: "Extra Wasabi", price: 15 }, { name: "Pickled Ginger", price: 10 }] },
+      { title: 'Dumplings', description: 'Steamed or fried dumplings stuffed with a savory filling of vegetables or meat, served with soy sauce.', price: 250, img: imageTwentyFive, tags: ['vegetarian', 'non-vegetarian'], addOns: [{ name: "Extra Soy Sauce", price: 10 }, { name: "Chili Oil", price: 20 }] },
+      { title: 'Chicken Tikka', description: 'Juicy pieces of chicken marinated in a blend of Indian spices, grilled to perfection.', price: 400, img: imageTwentySix, tags: ['non-vegetarian', 'spicy'], addOns: [{ name: "Mint Chutney", price: 20 }, { name: "Extra Spices", price: 15 }] },
+      { title: 'Tofu Steak', description: 'Grilled tofu steak marinated with herbs and spices, served with sautéed vegetables.', price: 300, img: imageTwentySeven, tags: ['vegetarian', 'vegan'], addOns: [{ name: "Extra Sauce", price: 25 }, { name: "Grilled Vegetables", price: 30 }] }
+    ];
 
   const dietaryFilters = ['vegan', 'vegetarian', 'gluten-free', 'non-vegetarian'];
 
