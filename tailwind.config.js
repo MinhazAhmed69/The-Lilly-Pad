@@ -12,6 +12,6 @@ export default {
   },
   plugins: [typography, daisyui],
   daisyui: {
-    themes: ["lemonade", "coffee", "valentine"],
+    themes: ["lemonade", "coffee", "valentine","forest","cupcake"],
   },
 };

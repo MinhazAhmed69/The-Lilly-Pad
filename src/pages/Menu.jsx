@@ -27,6 +27,15 @@ import imageTwentyFour from '../assets/twentyfour.jpg';
 import imageTwentyFive from '../assets/twentyfive.jpg';
 import imageTwentySix from '../assets/twentysix.jpg';
 import imageTwentySeven from '../assets/twentyseven.jpg';
+import imageTwentyEight from '../assets/twentyeight.jpg';
+import imageTwentyNine from '../assets/twentynine.jpg';
+import imageThirty from '../assets/thirty.jpg';
+import imageThirtyOne from '../assets/thirtyone.jpg';
+import imageThirtyTwo from '../assets/thirtytwo.jpg';
+import imageThirtyThree from '../assets/thirtythree.jpg';
+import imageThirtyFour from '../assets/thirtyfour.jpg';
+import imageThirtyFive from '../assets/thirtyfive.jpg';
+import imageThirtySix from '../assets/thirtysix.jpg';
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1731226949859.json';
 import { motion } from 'framer-motion';
@@ -63,9 +72,18 @@ const Menu = () => {
     { title: 'Smoothie Bowl', description: 'A refreshing blend of fruits topped with granola, seeds, and fresh berries.', price: 180, img: imageTwentyTwo, tags: ['vegan', 'gluten-free'], addOns: [{ name: "Extra Berries", price: 20 }, { name: "Chia Seeds", price: 10 }] },
     { title: 'British Breakfast', description: 'A classic hearty breakfast with baked beans, sautéed mushrooms, grilled tomatoes, hash browns, and toast.', price: 250, img: imageTwentyThree, tags: ['vegetarian'], addOns: [{ name: "Extra Hash Browns", price: 20 }, { name: "Vegan Sausage", price: 30 }] },
     { title: 'Sushi', description: 'Assorted sushi rolls with fresh fish, vegetables, and tangy soy sauce.', price: 350, img: imageTwentyFour, tags: ['non-vegetarian'], addOns: [{ name: "Extra Wasabi", price: 15 }, { name: "Pickled Ginger", price: 10 }] },
-      { title: 'Dumplings', description: 'Steamed or fried dumplings stuffed with a savory filling of vegetables or meat, served with soy sauce.', price: 250, img: imageTwentyFive, tags: ['vegetarian', 'non-vegetarian'], addOns: [{ name: "Extra Soy Sauce", price: 10 }, { name: "Chili Oil", price: 20 }] },
-      { title: 'Chicken Tikka', description: 'Juicy pieces of chicken marinated in a blend of Indian spices, grilled to perfection.', price: 400, img: imageTwentySix, tags: ['non-vegetarian', 'spicy'], addOns: [{ name: "Mint Chutney", price: 20 }, { name: "Extra Spices", price: 15 }] },
-      { title: 'Tofu Steak', description: 'Grilled tofu steak marinated with herbs and spices, served with sautéed vegetables.', price: 300, img: imageTwentySeven, tags: ['vegetarian', 'vegan'], addOns: [{ name: "Extra Sauce", price: 25 }, { name: "Grilled Vegetables", price: 30 }] }
+    { title: 'Dumplings', description: 'Steamed or fried dumplings stuffed with a savory filling of vegetables or meat, served with soy sauce.', price: 250, img: imageTwentyFive, tags: ['non-vegetarian'], addOns: [{ name: "Extra Soy Sauce", price: 10 }, { name: "Chili Oil", price: 20 }] },
+    { title: 'Chicken Tikka', description: 'Juicy pieces of chicken marinated in a blend of Indian spices, grilled to perfection.', price: 400, img: imageTwentySix, tags: ['non-vegetarian', 'spicy'], addOns: [{ name: "Mint Chutney", price: 20 }, { name: "Extra Spices", price: 15 }] },
+    { title: 'Tofu Steak', description: 'Grilled tofu steak marinated with herbs and spices, served with sautéed vegetables.', price: 300, img: imageTwentySeven, tags: ['vegetarian', 'vegan'], addOns: [{ name: "Extra Sauce", price: 25 }, { name: "Grilled Vegetables", price: 30 }] },
+    { title: 'Fugu' , description: 'Known for its subtle flavor and dangerous preparation' , price:800,img: imageTwentyEight, tags:['non-vegetarian'],addOns: [{ name: "Extra Wasabi", price: 15 }, { name: "Pickled Ginger", price: 10 }] },
+    { title: 'Caesar Salad' , description: 'A popular salad consisting of romaine lettuce, croutons, parmesan cheese, and Caesar dressing ' , price:300,img: imageTwentyNine, tags:['non-vegetarian','salad'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Extra Chillies", price: 10 }] },
+    { title: 'Vegan Tacos' , description: 'Corn tortillas filled with plant-based fillings ' , price:400,img: imageThirty, tags:['vegan'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Tobasco Sos", price: 40 }] },
+    { title: 'Tiramisu' , description: 'Tiramisu is a classic Italian dessert made with layers of coffee-soaked ladyfingers, creamy mascarpone cheese, and a dusting of cocoa powder.' , price:100,img: imageThirtyOne, tags:['veg'],addOns: [{ name: "Extra Maple Syrup", price: 25 }, { name: "Extra Cream", price: 40 }] },
+    { title: 'Seitan' , description: 'Seitan is a plant-based protein made from wheat gluten, often used as a meat substitute  ' , price:200,img: imageThirtyTwo, tags:['vegan'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Extra Spices Added", price: 40 }] },
+    { title: 'Chicken 65' , description: 'Chicken 65 , a popular and spicy South Indian fried chicken dish known for its bold flavors' , price:300,img: imageThirtyThree, tags:['non-vegetarian'],addOns: [{ name: "Extra Chilies", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
+    { title: 'Greek Salad(Vegan Version)' , description: 'A refreshing mix of cucumbers, tomatoes, onions, olives, and vegan feta, tossed in tangy olive oil vinaigrette.' , price:100,img: imageThirtyFour, tags:['vegan','gluten-free'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
+    { title: 'Cheese Garlic Bread' , description: 'Toasted bread topped with garlic butter, melted cheese, and herbs.' , price:150,img: imageThirtyFive, tags:['vegetarian'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
+    { title: 'Cheese Croissant with Chocolate Syrup' , description: 'A buttery, chocolaty , flaky pastry filled with melted cheese, often served as a snack or breakfast item' , price:90,img: imageThirtySix, tags:['vegetarian'],addOns: [{ name: "Maple Syrup", price: 25 }, { name: "Honey", price: 40 }] }
     ];
 
   const dietaryFilters = ['vegan', 'vegetarian', 'gluten-free', 'non-vegetarian'];
