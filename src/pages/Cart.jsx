@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { useCart } from '../components/CartContext';
 import Lottie from "lottie-react";
 import { motion } from "framer-motion";
-import animationData1 from "../assets//Animation - 1731262377297.json"; // Replace with your Lottie JSON file path
+import animationData1 from "../assets/Animation - 1731262377297.json"; // Replace with your Lottie JSON file path
 
 const Cart = () => {
   const { cart, clearCart } = useCart();
@@ -28,10 +28,17 @@ const Cart = () => {
           <div>
             <ul className="divide-y divide-gray-200">
               {cart.map((item, index) => (
-                <li key={index} className="flex justify-between py-4">
-                  <div>
-                    <h3 className="text-lg font-semibold">{item.title}</h3>
-                    <p className="text-sm text-gray-500">{`Quantity: ${item.quantity}`}</p>
+                <li key={index} className="flex items-center justify-between py-4">
+                  <div className="flex items-center space-x-4">
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-16 h-16 object-cover rounded-md"
+                    />
+                    <div>
+                      <h3 className="text-lg font-semibold">{item.title}</h3>
+                      <p className="text-sm text-gray-500">{`Quantity: ${item.quantity}`}</p>
+                    </div>
                   </div>
                   <p className="text-lg font-bold text-gray-700">{`₹${item.price * item.quantity}`}</p>
                 </li>
@@ -82,25 +89,24 @@ const Cart = () => {
       )}
 
       {/* Bottom Right Lottie Animation */}
-     {/* Bottom Right Lottie Animation */}
-<motion.div
-  initial={{ y: 0 }}
-  animate={{ y: [0, -10, 0] }} // Smooth up-and-down movement
-  transition={{
-    duration: 4,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
-  className="fixed bottom-0 right-0 w-[600px] h-[600px] pointer-events-none" // Increased size
->
-  <Lottie
-    lottieRef={lottieRef}
-    animationData={animationData1}
-    loop={true} // Enables continuous playback
-  />
-</motion.div>
+      <motion.div
+        initial={{ y: 0 }}
+        animate={{ y: [0, -10, 0] }} // Smooth up-and-down movement
+        transition={{
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
+        className="fixed bottom-0 right-0 w-[600px] h-[600px] pointer-events-none" // Increased size
+      >
+        <Lottie
+          lottieRef={lottieRef}
+          animationData={animationData1}
+          loop={true} // Enables continuous playback
+        />
+      </motion.div>
     </div>
   );
 };
 
-export default Cart; 
+export default Cart;
