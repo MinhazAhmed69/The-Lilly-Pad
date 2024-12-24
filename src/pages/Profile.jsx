@@ -8,7 +8,7 @@ const Profile = ({ theme }) => {
       : {
           name: 'Minhaz Ahmed',
           email: 'minhazahmed123@gmail.com',
-          bio: 'Onwer and Head',
+          bio: 'Onwer and Head Chef',
           phone: '99013696969',
           location: 'New York, USA',
         };

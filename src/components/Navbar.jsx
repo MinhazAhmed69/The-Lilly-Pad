@@ -64,8 +64,8 @@ const Navbar = () => {
                   <option value="lemonade">Lemonade</option>
                   <option value="coffee">Coffee</option>
                   <option value="valentine">Valentine</option>
+                  <option value="retro">Retro</option>
                   <option value="forest">Forest</option>
-                  <option value="cupcake">Cupcake</option>
                 </select>
               </li>
             </ul>
@@ -87,8 +87,8 @@ const Navbar = () => {
           <option value="valentine">Valentine</option>
           <option value="lemonade">Lemonade</option>
           <option value="coffee">Coffee</option>
+          <option value="retro">Retro</option>
           <option value="forest">Forest</option>
-          <option value="cupcake">Cupcake</option>
         </select>
       </div>
     </div>
