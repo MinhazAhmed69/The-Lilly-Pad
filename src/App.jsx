@@ -9,8 +9,9 @@ import Menu from './pages/Menu';
 import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
-import Profile from './pages/Profile'; // Import Profile page
-import { CartProvider } from './components/CartContext'; // Import CartProvider
+import Profile from './pages/Profile';
+import OfferPage from './pages/OfferPage'; // Import OfferPage
+import { CartProvider } from './components/CartContext'; 
 
 function App() {
   const location = useLocation();
@@ -28,7 +29,8 @@ function App() {
               <Route path="/contact" element={<Cart />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
-              <Route path="/profile" element={<Profile />} /> {/* Added Profile route */}
+              <Route path="/profile" element={<Profile />} />
+              <Route path="/offers" element={<OfferPage />} /> {/* Added OfferPage route */}
             </Routes>
           </AnimatePresence>
         </main>

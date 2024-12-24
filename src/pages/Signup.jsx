@@ -77,7 +77,7 @@ const Signup = () => {
           )}
           <div className="divider">OR</div>
           <div className="form-control">
-            <button className="btn btn-outline w-full">Sign up with GitHub</button>
+            <button className="btn btn-outline w-full">Sign up with Google</button>
           </div>
         </div>
       </div>

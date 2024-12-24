@@ -48,6 +48,7 @@ const Navbar = () => {
               {/* Sidebar content with navigation links */}
               <li><Link to="/" className="btn btn-ghost">Home</Link></li>
               <li><Link to="/menu" className="btn btn-ghost">Menu</Link></li>
+              <li><Link to="/offers" className="btn btn-ghost">Offers</Link></li> {/* New Offers Link */}
               <li><Link to="/contact" className="btn btn-ghost">Cart</Link></li>
               <li><Link to="/about" className="btn btn-ghost">About</Link></li>
               <li><Link to="/profile" className="btn btn-ghost">Profile</Link></li>
@@ -77,9 +78,9 @@ const Navbar = () => {
       <div className="hidden md:flex">
         <Link to="/" className="btn btn-ghost">Home</Link>
         <Link to="/menu" className="btn btn-ghost">Menu</Link>
+        <Link to="/offers" className="btn btn-ghost">Offers</Link> {/* New Offers Link */}
         <Link to="/contact" className="btn btn-ghost">Cart</Link>
         <Link to="/about" className="btn btn-ghost">Contact Us</Link>
-        {/* Theme select */}
         <Link to="/login" className="btn btn-ghost ml-2">Login</Link>
         <Link to="/signup" className="btn btn-ghost ml-2">Sign Up</Link>
         <Link to="/profile" className="btn btn-ghost">Profile</Link>
