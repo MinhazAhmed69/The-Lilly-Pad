@@ -10,8 +10,8 @@ import Cart from './pages/Cart';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
-import OfferPage from './pages/OfferPage'; // Import OfferPage
-import { CartProvider } from './components/CartContext'; 
+import Reservation from './pages/Reservation'; // Import Reservation Page
+import { CartProvider } from './components/CartContext';
 
 function App() {
   const location = useLocation();
@@ -30,7 +30,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/offers" element={<OfferPage />} /> {/* Added OfferPage route */}
+              <Route path="/reservation" element={<Reservation />} /> {/* New Reservation Route */}
             </Routes>
           </AnimatePresence>
         </main>

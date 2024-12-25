@@ -7,11 +7,115 @@ import animationData1 from "../assets/Animation - 1731262377297.json"; // Replac
 const Cart = () => {
   const { cart, clearCart } = useCart();
   const [isOrderPlaced, setIsOrderPlaced] = useState(false);
-
+  const [selectedCoupon, setSelectedCoupon] = useState(null);
+  const [discount, setDiscount] = useState(0);
+  const [manualCoupon, setManualCoupon] = useState('');
   const lottieRef = useRef(); // Reference for the Lottie animation
+
+  // Sample coupons with discounts and expiration dates
+  const validCoupons = [
+    {
+      code: 'DISCOUNT10',
+      discount: 10,  // 10% discount
+      expirationDate: '2024-12-31',
+    },
+    {
+      code: 'DISCOUNT20',
+      discount: 20,  // 20% discount
+      expirationDate: '2025-01-15',
+    },
+    {
+      code: 'DISCOUNT30',
+      discount: 30,  // 30% discount
+      expirationDate: '2024-12-20',
+    },
+    {
+      code: 'NEWYEAR50',
+      discount: 50,  // 50% discount for New Year
+      expirationDate: '2024-12-31',
+    },
+    {
+      code: 'FESTIVE25',
+      discount: 25,  // 25% discount for festive season
+      expirationDate: '2024-12-25',
+    },
+    {
+      code: 'SUMMERSALE15',
+      discount: 15,  // 15% discount for summer sale
+      expirationDate: '2025-06-30',
+    },
+    {
+      code: 'BLACKFRIDAY40',
+      discount: 40,  // 40% discount for Black Friday
+      expirationDate: '2024-11-29',
+    },
+    {
+      code: 'SPRINGDEAL5',
+      discount: 5,  // 5% discount for spring sale
+      expirationDate: '2025-04-15',
+    },
+    {
+      code: 'CYBERMONDAY45',
+      discount: 45,  // 45% discount for Cyber Monday
+      expirationDate: '2024-12-02',
+    },
+    {
+      code: 'WELCOME2024',
+      discount: 20,  // 20% discount for new users
+      expirationDate: '2024-12-31',
+    },
+  ];
+
+  // Function to check if the coupon is expired
+  const isCouponExpired = (expirationDate) => {
+    const today = new Date();
+    const expiration = new Date(expirationDate);
+    return today > expiration;
+  };
 
   // Calculate the total price
   const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const totalWithDiscount = totalPrice - (totalPrice * discount) / 100;
+
+  // Handle coupon change from dropdown
+  const handleCouponChange = (event) => {
+    const selectedCouponCode = event.target.value;
+    const coupon = validCoupons.find(c => c.code === selectedCouponCode);
+    
+    if (coupon) {
+      if (isCouponExpired(coupon.expirationDate)) {
+        alert(`The coupon ${coupon.code} has expired!`);
+        setSelectedCoupon(null);
+        setDiscount(0);
+      } else {
+        setSelectedCoupon(coupon);
+        setDiscount(coupon.discount);
+      }
+    }
+  };
+
+  // Handle manual coupon input
+  const handleManualCouponChange = (event) => {
+    setManualCoupon(event.target.value);
+  };
+
+  const applyManualCoupon = () => {
+    const coupon = validCoupons.find(c => c.code === manualCoupon);
+    if (coupon) {
+      if (isCouponExpired(coupon.expirationDate)) {
+        alert(`The coupon ${coupon.code} has expired!`);
+        setManualCoupon('');
+        setDiscount(0);
+      } else {
+        setSelectedCoupon(coupon);
+        setDiscount(coupon.discount);
+      }
+    } else {
+      alert('Invalid coupon code!');
+      setManualCoupon('');
+      setDiscount(0);
+    }
+  };
 
   const handleOrderNow = () => {
     setIsOrderPlaced(true);
@@ -51,6 +155,53 @@ const Cart = () => {
                 <p className="text-gray-700">Total:</p>
                 <p className="text-gray-700">{`₹${totalPrice}`}</p>
               </div>
+
+              {/* Discount Box */}
+              {discount > 0 && (
+                <div className="flex justify-between items-center mt-4 text-green-600">
+                  <p>Coupon Applied:</p>
+                  <p>{`-${discount}%`}</p>
+                </div>
+              )}
+
+              {/* Final Price After Discount */}
+              <div className="flex justify-between items-center font-semibold text-lg mt-4">
+                <p className="text-gray-700">Total After Discount:</p>
+                <p className="text-gray-700">{`₹${totalWithDiscount.toFixed(2)}`}</p>
+              </div>
+            </div>
+
+            {/* Coupon Dropdown */}
+            <div className="flex items-center mt-6">
+              <select
+                value={selectedCoupon ? selectedCoupon.code : ''}
+                onChange={handleCouponChange}
+                className="px-4 py-2 w-3/4 rounded-md border border-gray-300"
+              >
+                <option value="">Select Coupon</option>
+                {validCoupons.map((coupon) => (
+                  <option key={coupon.code} value={coupon.code}>
+                    {coupon.code} - Expires: {coupon.expirationDate}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            {/* Manual Coupon Input */}
+            <div className="flex items-center mt-4">
+              <input
+                type="text"
+                value={manualCoupon}
+                onChange={handleManualCouponChange}
+                className="px-4 py-2 w-3/4 rounded-md border border-gray-300"
+                placeholder="Enter Coupon Code"
+              />
+              <button
+                onClick={applyManualCoupon}
+                className="px-4 py-2 ml-2 rounded-md text-white bg-pink-600 hover:bg-pink-700 transition"
+              >
+                Apply Coupon
+              </button>
             </div>
 
             {/* Buttons for clearing the cart and placing the order */}
