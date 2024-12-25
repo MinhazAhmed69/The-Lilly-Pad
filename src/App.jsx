@@ -11,7 +11,8 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Profile from './pages/Profile';
 import Reservation from './pages/Reservation'; // Import Reservation Page
-import { CartProvider } from './components/CartContext';
+import Blog from './pages/Blog'; // Import Blog Page
+import { CartProvider } from './components/CartContext'; // Ensure CartContext is provided
 
 function App() {
   const location = useLocation();
@@ -30,7 +31,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/reservation" element={<Reservation />} /> {/* New Reservation Route */}
+              <Route path="/reservation" element={<Reservation />} /> {/* Reservation Route */}
+              <Route path="/blog" element={<Blog />} /> {/* New Blog Route */}
             </Routes>
           </AnimatePresence>
         </main>

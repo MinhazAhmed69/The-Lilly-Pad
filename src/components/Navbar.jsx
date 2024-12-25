@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { GiHamburgerMenu } from "react-icons/gi";
+import { GiHamburgerMenu } from 'react-icons/gi';
 import { themeChange } from 'theme-change';
 import Lottie from 'react-lottie';
 import animationData from '../assets/Animation - 1734367893126.json';
@@ -50,9 +50,9 @@ const Navbar = () => {
               <li><Link to="/menu" className="btn btn-ghost">Menu</Link></li>
               <li><Link to="/contact" className="btn btn-ghost">Cart</Link></li>
               <li><Link to="/about" className="btn btn-ghost">About</Link></li>
-              <li><Link to="/reservation" className="btn btn-ghost">Reservation</Link></li> {/* Reservation Link */}
+              <li><Link to="/reservation" className="btn btn-ghost">Reservation</Link></li>
               <li><Link to="/profile" className="btn btn-ghost">Profile</Link></li>
-
+              <li><Link to="/blog" className="btn btn-ghost">Blog</Link></li> {/* Blog Link */}
               {/* Theme select */}
               <li>
                 <Link to="/login" className="btn btn-ghost w-full">Login</Link>
@@ -80,10 +80,11 @@ const Navbar = () => {
         <Link to="/menu" className="btn btn-ghost">Menu</Link>
         <Link to="/contact" className="btn btn-ghost">Cart</Link>
         <Link to="/about" className="btn btn-ghost">Contact Us</Link>
-        <Link to="/reservation" className="btn btn-ghost">Reservation</Link> {/* Reservation Link */}
+        <Link to="/reservation" className="btn btn-ghost">Reservation</Link>
         <Link to="/login" className="btn btn-ghost ml-2">Login</Link>
         <Link to="/signup" className="btn btn-ghost ml-2">Sign Up</Link>
         <Link to="/profile" className="btn btn-ghost">Profile</Link>
+        <Link to="/blog" className="btn btn-ghost">Blog</Link> {/* Blog Link */}
         <select data-choose-theme className="btn hidden lg:block">
           <option value="valentine">Valentine</option>
           <option value="lemonade">Lemonade</option>
