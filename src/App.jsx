@@ -14,6 +14,7 @@ import Reservation from './pages/Reservation'; // Import Reservation Page
 import Blog from './pages/Blog'; // Import Blog Page
 import Catering from './pages/Catering'; // Import Catering Page
 import CateringMenu from './components/CateringMenu'; // Import CateringMenu Component
+import PrivateEvent from './pages/PrivateEvent';
 import { CartProvider } from './components/CartContext'; // Ensure CartContext is provided
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
               <Route path="/blog" element={<Blog />} /> {/* Blog Route */}
               <Route path="/catering" element={<Catering />} /> {/* Catering Route */}
               <Route path="/catering-menu" element={<CateringMenu />} /> {/* Catering Menu Route */}
+              <Route path="/privateevent" element={<PrivateEvent />} />
             </Routes>
           </AnimatePresence>
         </main>

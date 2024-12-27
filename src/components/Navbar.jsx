@@ -54,6 +54,7 @@ const Navbar = () => {
               <li><Link to="/catering" className="btn btn-ghost">Catering</Link></li> {/* Catering Link */}
               <li><Link to="/profile" className="btn btn-ghost">Profile</Link></li>
               <li><Link to="/blog" className="btn btn-ghost">Blog</Link></li> {/* Blog Link */}
+              <li><Link to="/privateevent" className="btn btn-ghost">Private Event</Link></li>
               {/* Theme select */}
               <li>
                 <Link to="/login" className="btn btn-ghost w-full">Login</Link>
@@ -87,6 +88,7 @@ const Navbar = () => {
         <Link to="/blog" className="btn btn-ghost">Blog</Link> {/* Blog Link */}
         <Link to="/login" className="btn btn-ghost ml-2">Login</Link>
         <Link to="/signup" className="btn btn-ghost ml-2">Sign Up</Link>
+        <Link to="/privateevent" className="btn btn-ghost">Private Event</Link>
         <select data-choose-theme className="btn hidden lg:block">
           <option value="valentine">Valentine</option>
           <option value="lemonade">Lemonade</option>
