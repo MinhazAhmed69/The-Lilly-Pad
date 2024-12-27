@@ -51,6 +51,7 @@ const Navbar = () => {
               <li><Link to="/contact" className="btn btn-ghost">Cart</Link></li>
               <li><Link to="/about" className="btn btn-ghost">About</Link></li>
               <li><Link to="/reservation" className="btn btn-ghost">Reservation</Link></li>
+              <li><Link to="/catering" className="btn btn-ghost">Catering</Link></li> {/* Catering Link */}
               <li><Link to="/profile" className="btn btn-ghost">Profile</Link></li>
               <li><Link to="/blog" className="btn btn-ghost">Blog</Link></li> {/* Blog Link */}
               {/* Theme select */}
@@ -78,13 +79,14 @@ const Navbar = () => {
       <div className="hidden md:flex">
         <Link to="/" className="btn btn-ghost">Home</Link>
         <Link to="/menu" className="btn btn-ghost">Menu</Link>
+        <Link to="/reservation" className="btn btn-ghost">Reservation</Link>
+        <Link to="/catering" className="btn btn-ghost">Catering</Link> {/* Catering Link */}
         <Link to="/contact" className="btn btn-ghost">Cart</Link>
         <Link to="/about" className="btn btn-ghost">Contact Us</Link>
-        <Link to="/reservation" className="btn btn-ghost">Reservation</Link>
-        <Link to="/login" className="btn btn-ghost ml-2">Login</Link>
-        <Link to="/signup" className="btn btn-ghost ml-2">Sign Up</Link>
         <Link to="/profile" className="btn btn-ghost">Profile</Link>
         <Link to="/blog" className="btn btn-ghost">Blog</Link> {/* Blog Link */}
+        <Link to="/login" className="btn btn-ghost ml-2">Login</Link>
+        <Link to="/signup" className="btn btn-ghost ml-2">Sign Up</Link>
         <select data-choose-theme className="btn hidden lg:block">
           <option value="valentine">Valentine</option>
           <option value="lemonade">Lemonade</option>
