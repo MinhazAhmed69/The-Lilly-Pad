@@ -1,31 +1,56 @@
 import React, { useState } from 'react';
 import imageRoyaldine from '../assets/Royaldine.jpg';
-import imageCentrahall from '../assets/Centralhall.jpg';
+import imageCentralhall from '../assets/Centralhall.jpg';
 import imageMarriagehall from '../assets/Marriagehall.jpg';
+import imageSeminarHall from '../assets/SeminarHall.jpg';
+import imagePrivateLounge from '../assets/PrivateLounge.jpg';
+import imageSmallRoyal from '../assets/SmallRoyal.jpg';
 
 const PrivateEvent = () => {
-  const privatePackages = [
+  const privateeventPackages = [
     {
-      title: 'Breakfast Bliss',
-      description: 'Start your mornings right with our curated breakfast platters featuring pastries, fresh fruits, and artisanal coffee.',
-      details: 'This package includes a selection of croissants, muffins, seasonal fruits, and freshly brewed coffee. Perfect for corporate meetings and morning events.',
-      price: 10000,
+      title: 'The Royal Dining',
+      description: 'We promise to serve you like our royals , and will not leave even a scope for complaint in that aspect',
+      details: 'Book our royal dining hall for the day and enjoy exclusive services, including personalized catering, a dedicated staff, customizable decor, and state-of-the-art amenities. Perfect for weddings, corporate events, and special celebrations, your event will be handled with elegance and care.',
+      price: 30000,
       image: imageRoyaldine,
     },
     {
-      title: 'High Tea Elegance',
-      description: 'Delight your guests with an array of sandwiches, scones, and premium tea selections.',
-      details: 'This package offers finger sandwiches, scones with clotted cream, and a variety of teas to elevate your high tea gatherings.',
-      price: 15000,
-      image: imageCentrahall,
+      title: 'Central Hall Excellence',
+      description: 'Host your event in our spacious and elegant Central Hall with exceptional service and ambiance.',
+      details: 'Our Central Hall package includes versatile seating arrangements, premium catering options, and personalized decor to suit any occasion. Whether it’s a corporate event, wedding, or celebration, we provide a refined atmosphere and expert service to make your event unforgettable.',
+      price: 50000,
+      image: imageCentralhall, // Use the relevant image for Central Hall
     },
     {
-      title: 'Custom Event Menu',
-      description: 'Tailor-made menus crafted to suit your event and preferences. Perfect for birthdays and celebrations.',
-      details: 'Our chefs work with you to create a personalized menu, ensuring every dish matches your taste and occasion.',
-      price: 'Varies',
-      image: imageMarriagehall,
+      title: 'Marriage Hall Elegance',
+      description: 'Celebrate your special day in our beautifully decorated Marriage Hall with exquisite services',
+      details: 'Our Marriage Hall package includes customizable decor, gourmet catering options, and dedicated service to create the perfect setting for your wedding day. We provide everything from the ceremony to the reception, ensuring a seamless and memorable experience.',
+      price: 100000,
+      image: imageMarriagehall, // Use the relevant image for the Marriage Hall
     },
+    {
+      title: 'Seminar Hall Excellence',
+      description: 'Host productive and professional events in our fully equipped Seminar Hall, designed for comfort and success.',
+      details: 'Our Seminar Hall package includes state-of-the-art audio-visual equipment, flexible seating arrangements, and personalized catering options to suit your event needs. Ideal for conferences, seminars, and workshops, ensuring a seamless and impactful experience.',
+      price: 5000,
+      image: imageSeminarHall,
+    },
+    {
+      title: 'Grande salone',
+      description: 'Gather your loved ones for a delightful family tea experience with a selection of sandwiches, scones, and premium teas.',
+      details: 'This package includes finger sandwiches, scones with clotted cream, and a variety of teas, offering a perfect family gathering experience. Enjoy a warm, intimate atmosphere for all ages.',
+      price: 5000,
+      image: imagePrivateLounge, // Use the relevant image for the Family Lounge
+
+    },
+    {
+      title: 'Royal Cube',
+      description: 'You can experience the Royals even if you cannot afford the royal dining and experience who you can be - a Royal',
+      details: 'You will get benefits like personalised orders and music themes as well',
+      price: 4000,
+      image: imageSmallRoyal,
+    }
   ];
 
   const [selectedPackage, setSelectedPackage] = useState(null);
@@ -43,19 +68,18 @@ const PrivateEvent = () => {
       {/* Hero Section */}
       <div className="text-center max-w-4xl mb-12">
         <h1 className="text-4xl font-bold mb-4 text-gray-800">Private Elegant Event Management</h1>
+        <br/>
         <p className="text-lg text-gray-600">
-        Whether it’s a cozy gathering, a sophisticated high tea, or an unforgettable celebratory feast, our private hall is the perfect venue to host your special moments. Immerse your guests in an ambiance of elegance, complemented by our signature dishes and curated cafe charm.
-        From meticulously sourced ingredients to a menu bursting with delightful flavors, we bring culinary artistry and warm hospitality to every occasion. Our flexible event packages are tailored to accommodate gatherings of all sizes, ensuring a seamless and personalized experience for you and your guests.
-        Let us transform your event into a memorable affair, with every detail thoughtfully planned to create moments of joy, celebration, and connection.
+          Our private hall is the ideal venue for any occasion, from intimate gatherings to grand celebrations. Enjoy elegant ambiance, signature dishes, and tailored event packages for all sizes, ensuring a memorable experience for you and your guests.
         </p>
         <button className="btn btn-primary mt-6 px-6 py-2 text-white rounded-lg bg-green-600 hover:bg-green-700">
-          Contact Us If you want to host a private event 
+          Contact Us if you want to host a private event 
         </button>
       </div>
 
       {/* Catering Packages */}
       <div className="flex flex-wrap justify-center gap-6 w-full max-w-6xl">
-        {cateringPackages.map((pkg) => (
+        {privateeventPackages.map((pkg) => (
           <div className="card glass w-80" key={pkg.title}>
             <figure className="h-48">
               <img

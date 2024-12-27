@@ -36,6 +36,9 @@ import imageThirtyThree from '../assets/thirtythree.jpg';
 import imageThirtyFour from '../assets/thirtyfour.jpg';
 import imageThirtyFive from '../assets/thirtyfive.jpg';
 import imageThirtySix from '../assets/thirtysix.jpg';
+import imageThirtySeven from '../assets/thirtyseven.jpg';
+import imageThirtyEight from '../assets/thirtyeight.jpg';
+import imageThirtyNine from '../assets/thirtynine.jpg';
 import Lottie from 'lottie-react';
 import animationData from '../assets/Animation - 1731226949859.json';
 import { motion } from 'framer-motion';
@@ -83,7 +86,10 @@ const Menu = () => {
     { title: 'Chicken 65' , description: 'Chicken 65 , a popular and spicy South Indian fried chicken dish known for its bold flavors' , price:300,img: imageThirtyThree, tags:['non-vegetarian'],addOns: [{ name: "Extra Chilies", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
     { title: 'Greek Salad(Vegan Version)' , description: 'A refreshing mix of cucumbers, tomatoes, onions, olives, and vegan feta, tossed in tangy olive oil vinaigrette.' , price:100,img: imageThirtyFour, tags:['vegan','gluten-free'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
     { title: 'Cheese Garlic Bread' , description: 'Toasted bread topped with garlic butter, melted cheese, and herbs.' , price:150,img: imageThirtyFive, tags:['vegetarian'],addOns: [{ name: "Extra Olives", price: 25 }, { name: "Finely Cut Onions", price: 40 }] },
-    { title: 'Cheese Croissant with Chocolate Syrup' , description: 'A buttery, chocolaty , flaky pastry filled with melted cheese, often served as a snack or breakfast item' , price:90,img: imageThirtySix, tags:['vegetarian'],addOns: [{ name: "Maple Syrup", price: 25 }, { name: "Honey", price: 40 }] }
+    { title: 'Cheese Croissant with Chocolate Syrup' , description: 'A buttery, chocolaty , flaky pastry filled with melted cheese, often served as a snack or breakfast item' , price:90,img: imageThirtySix, tags:['vegetarian'],addOns: [{ name: "Maple Syrup", price: 25 }, { name: "Honey", price: 40 }] },
+    { title: 'Tempura Prawns' , description: 'Crispy, golden-battered prawns served with a tangy dipping sauce for a perfect crunch.' , price:300,img: imageThirtySeven, tags:['non-vegetarian'],addOns: [{ name: "Extra Onion Toppings", price: 20 }, { name: "Extra Fresh Appetizers", price: 25 }] },
+    { title: 'Salmon with Lemon-Dill Butter Sauce' , description: ' Pan-seared salmon fillet topped with a fresh lemon zest and crispy fried coating for a refreshing twist' , price:200,img: imageThirtyEight, tags:['non-vegetarian'],addOns: [{ name: "Freshly Cut Onion", price: 25 }, { name: "Extra Fresh Appetizers", price: 25 }] },
+    { title: 'Cavier' , description: 'Premium black caviar served with blinis and crème fraîche for an elegant delicacy' , price:500,img: imageThirtyNine, tags:['non-vegetarian'],addOns: [{ name: "Freshly Cut Onion", price: 25 }, { name: "Extra Fresh Appetizers", price: 25 }] }
     ];
 
   const dietaryFilters = ['vegan', 'vegetarian', 'gluten-free', 'non-vegetarian'];

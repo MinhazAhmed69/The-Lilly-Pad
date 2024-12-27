@@ -9,20 +9,24 @@ import saketImage from '../assets/saket.jpg';
 import kushalImage from '../assets/kushal.jpg';
 import vivekImage from '../assets/vivek.jpg';
 import imageTeam from '../assets/team.jpg';
+import image2022 from '../assets/2022.jpg';
+import image2023 from '../assets/2023.jpg';
 
 const Blog = () => {
   const [activeTab, setActiveTab] = useState('latest');
 
   // Blog posts data
   const latestPosts = [
-    { title: 'Opening of The Lily Pad', date: '1998', image: image1999, content: 'The Lily Pad opened in 1998 with a goal to bring the best of fine dining to the local community.', fullContent: 'In 1998, The Lily Pad opened its doors for the first time. With an emphasis on high-quality, locally sourced ingredients and a commitment to exceptional service, it quickly became a staple of fine dining in the community. Over the years, we’ve built strong relationships with local suppliers and crafted a unique menu that evolves with the seasons. The opening was a landmark moment in our journey.' },
-    { title: 'First International Branch Opened', date: '2001', image: image2001, content: 'In 2001, we expanded globally, bringing our flavors to new regions with great success.', fullContent: 'In 2001, after years of successful growth, we made the decision to open our first international location. The new branch brought our signature dishes and unique culinary experience to a global audience. The opening was met with great excitement, and the new location was an immediate success, setting the stage for more international expansions in the years to follow.' },
     { title: 'New Vegan Menu Launch', date: '2023', image: imageVeg, content: 'In 2023, we launched our new vegan menu to cater to the growing demand for plant-based options.', fullContent: 'In 2023, we responded to the increasing demand for plant-based meals by launching a new vegan menu. This menu features a variety of delicious, innovative dishes designed to cater to vegan diets without compromising on flavor or quality. The launch was met with enthusiastic feedback from our community, and it has become one of our most popular offerings.' },
+    { title: 'First International Branch Opened', date: '2001', image: image2001, content: 'In 2001, we expanded globally, bringing our flavors to new regions with great success.', fullContent: 'In 2001, after years of successful growth, we made the decision to open our first international location. The new branch brought our signature dishes and unique culinary experience to a global audience. The opening was met with great excitement, and the new location was an immediate success, setting the stage for more international expansions in the years to follow.' },
+    { title: 'Opening of The Lily Pad', date: '1998', image: image1999, content: 'The Lily Pad opened in 1998 with a goal to bring the best of fine dining to the local community.', fullContent: 'In 1998, The Lily Pad opened its doors for the first time. With an emphasis on high-quality, locally sourced ingredients and a commitment to exceptional service, it quickly became a staple of fine dining in the community. Over the years, we’ve built strong relationships with local suppliers and crafted a unique menu that evolves with the seasons. The opening was a landmark moment in our journey.' },
   ];
 
   const popularPosts = [
     { title: 'Our Journey', date: '2024', image: image2024, content: 'Since 1984, we have been dedicated to serving the best flavors and unforgettable experiences.', fullContent: 'Our journey began in 1984 with a single goal: to serve the finest flavors and create unforgettable dining experiences. Over the years, we’ve expanded and evolved, but our core values remain the same—quality, passion, and a commitment to excellence. We’ve seen many changes in the industry, but our focus on delivering exceptional experiences has remained constant.' },
     { title: 'Michelin Star Achievement', date: '2007', image: image2001, content: 'In 2007, we were awarded our first Michelin star, a testament to our dedication to quality and excellence.', fullContent: 'In 2007, we achieved one of the highest honors in the culinary world when we were awarded our first Michelin star. This recognition validated the hard work, creativity, and dedication of our entire team. We continued to innovate and strive for excellence, and this accolade served as a constant reminder of our commitment to providing the best possible dining experience for our guests.' },
+    { title: 'New Halls for Our Valued Guests', date: '2023', image: image2023, content: 'In 2023, we unveiled our brand-new dining halls, designed to enhance every guest experience.', fullContent: 'To provide a more luxurious and comfortable atmosphere for our guests, we opened new halls in 2023. These beautifully designed spaces offer the perfect environment for intimate gatherings, large celebrations, and corporate events, making every occasion truly special.' },
+    { title: 'Catering Services Expansion', date: '2022', image: image2022, content: 'In 2022, we expanded our catering services to bring our exquisite dishes to your events.', fullContent: 'Our catering services, launched in 2022, allow us to bring the same exceptional culinary experiences to your special occasions. Whether for weddings, corporate events, or private parties, we offer customized menus and professional service to make your event unforgettable.' }
   ];
 
   const teamPost = {
@@ -68,6 +72,9 @@ const Blog = () => {
 
   const allPosts = [...latestPosts, ...popularPosts, teamPost];
 
+  // Sort posts by date in descending order
+  const sortedPosts = allPosts.sort((a, b) => b.date - a.date);
+
   // State to track the expanded post
   const [expandedPost, setExpandedPost] = useState(null);
 
@@ -82,7 +89,7 @@ const Blog = () => {
 
   // Function to get the correct tab content
   const getTabContent = () => {
-    const posts = activeTab === 'latest' ? latestPosts : activeTab === 'popular' ? popularPosts : allPosts;
+    const posts = activeTab === 'latest' ? latestPosts : activeTab === 'popular' ? popularPosts : sortedPosts;
     return posts.map(post => (
       <div className="card w-full max-w-md bg-white shadow-lg rounded-lg overflow-hidden mb-6" key={post.title}>
         <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />

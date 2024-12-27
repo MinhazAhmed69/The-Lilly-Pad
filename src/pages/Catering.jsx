@@ -43,6 +43,7 @@ const Catering = () => {
       {/* Hero Section */}
       <div className="text-center max-w-4xl mb-12">
         <h1 className="text-4xl font-bold mb-4 text-gray-800">Catering Services</h1>
+        <br/>
         <p className="text-lg text-gray-600">
           Whether it's a brunch, high tea, or a celebratory feast, let us cater to your events with our signature dishes and cafe vibes. 
           From handpicked ingredients to an assortment of delightful flavors, we aim to make your special moments unforgettable. 
